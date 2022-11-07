@@ -1,0 +1,141 @@
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+
+    &__item {
+        margin-right: 50px;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-weight: 500;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: $article-color;
+        transition: $duration $timing-function;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+}
+
+.contacts-nav {
+    display: flex;
+    margin-left: auto;
+
+    &__item {
+        margin-right: 50px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: $text-color;
+        transition: $duration $timing-function;
+
+        &:hover svg,
+        &:focus svg {
+            fill: $accent-color;
+        }
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+
+        &:hover svg {
+            color: $accent-color;
+        }
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: $text-color;
+        transition: $duration $timing-function;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+.link-current {
+    color: $accent-color;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        bottom: 0;
+        height: 4px;
+        background: $accent-color;
+        border-radius: 2px;
+    }
+}
+
+.contacts {
+    margin-left: 0;
+
+    &__item {
+        margin-bottom: 9px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__map {
+        font-style: normal;
+        line-height: 1.71;
+        color: $white-color;
+        transition: $duration $timing-function;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+
+    &__link {
+        margin-bottom: 9px;
+        font-style: normal;
+        line-height: 1.71;
+        color: rgba(255, 255, 255, 0.6);
+        transition: $duration $timing-function;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+}
